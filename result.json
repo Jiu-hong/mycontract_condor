@@ -1,0 +1,239 @@
+"transactions": {
+  "2": [
+    {
+      "Version1": "88ae8e005c76e2f655823bcf1d95a7a23168dd7bc344a47ea100a0f7f3c6aa74"
+    }
+  ]
+},
+{
+  "jsonrpc": "2.0",
+  "id": -2899555864984715799,
+  "result": {
+    "api_version": "2.0.0",
+    "transaction": {
+      "Version1": {
+        "hash": "88ae8e005c76e2f655823bcf1d95a7a23168dd7bc344a47ea100a0f7f3c6aa74",
+        "payload": {
+          "initiator_addr": {
+            "PublicKey": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f"
+          },
+          "timestamp": "2024-12-02T03:50:34.282Z",
+          "ttl": "30m",
+          "chain_name": "casper-jiuhong-test-jh",
+          "pricing_mode": {
+            "Fixed": {
+              "additional_computation_factor": 0,
+              "gas_price_tolerance": 2
+            }
+          },
+          "fields": {
+            "args": {
+              "Named": []
+            },
+            "entry_point": "Call",
+            "scheduling": "Standard",
+            "target": {
+              "Session": {
+                "is_install_upgrade": true,
+                "runtime": "VmCasperV1",
+                "module_bytes": "[72218 hex chars]",
+                "transferred_value": 0,
+                "seed": null
+              }
+            }
+          }
+        },
+        "approvals": [
+          {
+            "signer": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f",
+            "signature": "0184e994bd4ca8dfddbcd353ff22c881c7678fd57d6edc17f74223af58d0db58d3c9fc22adf8b46d7aff419a4c25e066cb7929a2eb893ac2e2d6d67602c7307907"
+          }
+        ]
+      }
+    },
+    "execution_info": {
+      "block_hash": "add618bb6172397278d801c81d7124e9c0ec6c3b905e3decaf183835636ba3ba",
+      "block_height": 489,
+      "execution_result": {
+        "Version2": {
+          "initiator": {
+            "PublicKey": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f"
+          },
+          "error_message": null,
+          "limit": "100000000000",
+          "consumed": "1196028372",
+          "cost": "100000000000",
+          "transfers": [],
+          "size_estimate": 36561,
+          "effects": [
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f9618fa7d8593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "0500e8764817",
+                    "parsed": "100000000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "uref-ec42b5364886556ddf163a6c6763e72709e388a6c8258155d454ce9dda3f07e5-000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "Unit",
+                    "bytes": "",
+                    "parsed": null
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+              "kind": {
+                "Write": {
+                  "ContractPackage": {
+                    "access_key": "uref-ec42b5364886556ddf163a6c6763e72709e388a6c8258155d454ce9dda3f07e5-007",
+                    "versions": [],
+                    "disabled_versions": [],
+                    "groups": [],
+                    "lock_status": "Unlocked"
+                  }
+                }
+              }
+            },
+            {
+              "key": "account-hash-7d18ff4673261bc5295fdc6640de169a5491ff9fe2d776f177d46a4dae1c3f9e",
+              "kind": {
+                "AddKeys": [
+                  {
+                    "name": "my_hash",
+                    "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1"
+                  }
+                ]
+              }
+            },
+            {
+              "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+              "kind": "Identity"
+            },
+            {
+              "key": "hash-425632e1af40d27d5a0600c4c512cbebfb97bb2a60247b8ba359c023499215e9",
+              "kind": {
+                "Write": {
+                  "ContractWasm": {
+                    "bytes": "[1020 hex chars]"
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-86f08f473f9014ba0530fefe8b896d9678f921f04c47395ff441df755050bf35",
+              "kind": {
+                "Write": {
+                  "Contract": {
+                    "contract_package_hash": "contract-package-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+                    "contract_wasm_hash": "contract-wasm-425632e1af40d27d5a0600c4c512cbebfb97bb2a60247b8ba359c023499215e9",
+                    "named_keys": [],
+                    "entry_points": [
+                      {
+                        "name": "apple",
+                        "entry_point": {
+                          "name": "apple",
+                          "args": [],
+                          "ret": "Unit",
+                          "access": "Public",
+                          "entry_point_type": "Called"
+                        }
+                      }
+                    ],
+                    "protocol_version": "2.0.0"
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+              "kind": {
+                "Write": {
+                  "ContractPackage": {
+                    "access_key": "uref-ec42b5364886556ddf163a6c6763e72709e388a6c8258155d454ce9dda3f07e5-007",
+                    "versions": [
+                      {
+                        "protocol_version_major": 2,
+                        "contract_version": 1,
+                        "contract_hash": "contract-86f08f473f9014ba0530fefe8b896d9678f921f04c47395ff441df755050bf35"
+                      }
+                    ],
+                    "disabled_versions": [],
+                    "groups": [],
+                    "lock_status": "Unlocked"
+                  }
+                }
+              }
+            },
+            {
+              "key": "account-hash-7d18ff4673261bc5295fdc6640de169a5491ff9fe2d776f177d46a4dae1c3f9e",
+              "kind": {
+                "AddKeys": [
+                  {
+                    "name": "apple_contract",
+                    "key": "hash-86f08f473f9014ba0530fefe8b896d9678f921f04c47395ff441df755050bf35"
+                  }
+                ]
+              }
+            },
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f9618fa7d8593010000",
+              "kind": {
+                "Prune": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f9618fa7d8593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96fcb9788593010000",
+              "kind": {
+                "Prune": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96fcb9788593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f9618fa7d8593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "0500e8764817",
+                    "parsed": "100000000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "bid-addr-01bca7967c32ae0697ad677c02fa3848f4ce91134aac70819bc45c773b26906d02",
+              "kind": "Identity"
+            },
+            {
+              "key": "bid-addr-04bca7967c32ae0697ad677c02fa3848f4ce91134aac70819bc45c773b26906d020d00000000000000",
+              "kind": "Identity"
+            },
+            {
+              "key": "bid-addr-04bca7967c32ae0697ad677c02fa3848f4ce91134aac70819bc45c773b26906d020d00000000000000",
+              "kind": {
+                "Write": {
+                  "BidKind": {
+                    "Credit": {
+                      "validator_public_key": "010e9ef415ab145cb353fd023f8b4b24b6c6925a40c8eebe7fe15c33c56870bb91",
+                      "era_id": 13,
+                      "amount": "50000000000"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

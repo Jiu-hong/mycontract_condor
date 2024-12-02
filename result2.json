@@ -1,0 +1,233 @@
+"transactions": {
+  "3": [
+    {
+      "Deploy": "8739849537e7c9cec817b581ee98c70b215e32278b7847c7432396ff1e8e3365"
+    }
+  ]
+}
+{
+  "jsonrpc": "2.0",
+  "id": 7133790957421613314,
+  "result": {
+    "api_version": "2.0.0",
+    "deploy": {
+      "hash": "8739849537e7c9cec817b581ee98c70b215e32278b7847c7432396ff1e8e3365",
+      "header": {
+        "account": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f",
+        "timestamp": "2024-12-02T04:15:43.968Z",
+        "ttl": "30m",
+        "gas_price": 1,
+        "body_hash": "c22e9bad92d56ab0d7709dbc55755fd4c8150432c63493ca81fc45d7c9621763",
+        "dependencies": [],
+        "chain_name": "casper-jiuhong-test-jh"
+      },
+      "payment": {
+        "ModuleBytes": {
+          "module_bytes": "",
+          "args": [
+            [
+              "amount",
+              {
+                "cl_type": "U512",
+                "bytes": "02e803",
+                "parsed": "1000"
+              }
+            ]
+          ]
+        }
+      },
+      "session": {
+        "ModuleBytes": {
+          "module_bytes": "[72218 hex chars]",
+          "args": []
+        }
+      },
+      "approvals": [
+        {
+          "signer": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f",
+          "signature": "01baa4c78b4f7c328701d16fdd90e75a8ef182b06b4adbf1cddff97a4aae72ef1199ceaa4226617793333efe7c6cac28e04bfb9154e87fb1bcd1d2779d859be609"
+        }
+      ]
+    },
+    "execution_info": {
+      "block_hash": "dbd57eff9a54000f37c99dc8ac16f55f6f6f6e496240394f5c13000f6d5aaa07",
+      "block_height": 584,
+      "execution_result": {
+        "Version2": {
+          "initiator": {
+            "PublicKey": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f"
+          },
+          "error_message": null,
+          "limit": "100000000000",
+          "consumed": "1196028372",
+          "cost": "100000000000",
+          "transfers": [],
+          "size_estimate": 36398,
+          "effects": [
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96a903958593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "0500e8764817",
+                    "parsed": "100000000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "uref-ea6925e9ac7108a0965947d30b9964b35b0d0149148e8bf08aabc6b8b98df61e-000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "Unit",
+                    "bytes": "",
+                    "parsed": null
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1",
+              "kind": {
+                "Write": {
+                  "ContractPackage": {
+                    "access_key": "uref-ea6925e9ac7108a0965947d30b9964b35b0d0149148e8bf08aabc6b8b98df61e-007",
+                    "versions": [],
+                    "disabled_versions": [],
+                    "groups": [],
+                    "lock_status": "Unlocked"
+                  }
+                }
+              }
+            },
+            {
+              "key": "account-hash-7d18ff4673261bc5295fdc6640de169a5491ff9fe2d776f177d46a4dae1c3f9e",
+              "kind": {
+                "AddKeys": [
+                  {
+                    "name": "my_hash",
+                    "key": "hash-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1"
+                  }
+                ]
+              }
+            },
+            {
+              "key": "hash-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1",
+              "kind": "Identity"
+            },
+            {
+              "key": "hash-ca862d0c822738d7adab27464c968a81b0e1af4b70948b4ec5453e71bd82f6d4",
+              "kind": {
+                "Write": {
+                  "ContractWasm": {
+                    "bytes": "[1020 hex chars]"
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-f49cf0bcfd1bfc4c0851e3a0f05fbe95e70d9a19cd49aeb314fdacbd466393a8",
+              "kind": {
+                "Write": {
+                  "Contract": {
+                    "contract_package_hash": "contract-package-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1",
+                    "contract_wasm_hash": "contract-wasm-ca862d0c822738d7adab27464c968a81b0e1af4b70948b4ec5453e71bd82f6d4",
+                    "named_keys": [],
+                    "entry_points": [
+                      {
+                        "name": "apple",
+                        "entry_point": {
+                          "name": "apple",
+                          "args": [],
+                          "ret": "Unit",
+                          "access": "Public",
+                          "entry_point_type": "Called"
+                        }
+                      }
+                    ],
+                    "protocol_version": "2.0.0"
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1",
+              "kind": {
+                "Write": {
+                  "ContractPackage": {
+                    "access_key": "uref-ea6925e9ac7108a0965947d30b9964b35b0d0149148e8bf08aabc6b8b98df61e-007",
+                    "versions": [
+                      {
+                        "protocol_version_major": 2,
+                        "contract_version": 1,
+                        "contract_hash": "contract-f49cf0bcfd1bfc4c0851e3a0f05fbe95e70d9a19cd49aeb314fdacbd466393a8"
+                      }
+                    ],
+                    "disabled_versions": [],
+                    "groups": [],
+                    "lock_status": "Unlocked"
+                  }
+                }
+              }
+            },
+            {
+              "key": "account-hash-7d18ff4673261bc5295fdc6640de169a5491ff9fe2d776f177d46a4dae1c3f9e",
+              "kind": {
+                "AddKeys": [
+                  {
+                    "name": "apple_contract",
+                    "key": "hash-f49cf0bcfd1bfc4c0851e3a0f05fbe95e70d9a19cd49aeb314fdacbd466393a8"
+                  }
+                ]
+              }
+            },
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96a903958593010000",
+              "kind": {
+                "Prune": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96a903958593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000",
+              "kind": {
+                "Prune": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96a903958593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "0500e8764817",
+                    "parsed": "100000000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "bid-addr-01c640fa7318060b67f8db467b5f48a2a7231ce969cb45ac60f7a0090f9b63d3de",
+              "kind": "Identity"
+            },
+            {
+              "key": "bid-addr-04c640fa7318060b67f8db467b5f48a2a7231ce969cb45ac60f7a0090f9b63d3de1000000000000000",
+              "kind": {
+                "Write": {
+                  "BidKind": {
+                    "Credit": {
+                      "validator_public_key": "01d752ba5168e5f2815c84ae32d276573435061393e9736cb4bb80919b37e23114",
+                      "era_id": 16,
+                      "amount": "100000000000"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

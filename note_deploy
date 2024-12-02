@@ -1,0 +1,27 @@
+./casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-path contract/target/wasm32-unknown-unknown/release/contract.wasm \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+./casper-client get-deploy -n http://172.142.97.81:7777  \
+8739849537e7c9cec817b581ee98c70b215e32278b7847c7432396ff1e8e3365
+
+===call entry-point===
+./casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-hash hash-f49cf0bcfd1bfc4c0851e3a0f05fbe95e70d9a19cd49aeb314fdacbd466393a8 \
+--session-entry-point apple \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+./casper-client get-deploy -n http://172.142.97.81:7777 \
+e8c1a4baba7678c73e0a175d5937d4b4dcb6a365d9251972b4dcf1cffffd2b3b
+==
+
+
+./casper-client get-block -n http://172.142.97.81:7777  -b 584
+./casper-client get-block -n http://172.142.97.81:7777  -b 602
+

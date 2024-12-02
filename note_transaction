@@ -1,0 +1,36 @@
+./casper-client put-transaction session \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--transaction-path contract/target/wasm32-unknown-unknown/release/contract.wasm \
+--payment-amount 1000 \
+--gas-price-tolerance 2 \
+--pricing-mode fixed \
+--install-upgrade \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+./casper-client get-transaction -n http://172.142.97.81:7777  \
+88ae8e005c76e2f655823bcf1d95a7a23168dd7bc344a47ea100a0f7f3c6aa74
+
+===call entry-point===
+./casper-client put-transaction package \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--package-address package-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1 \
+--gas-price-tolerance 2 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+
+==
+./casper-client put-transaction package-name \
+--transaction-package-name "my_hash" \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-entry-point apple \
+--gas-price-tolerance 2 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+./casper-client get-transaction -n http://172.142.97.81:7777  \
+30e885aa38d667ab2bd046c333876b255a4b03d3ef4a93224f3c4ab57843e491
+
+./casper-client get-block -n http://172.142.97.81:7777  -b 559
+./casper-client get-block -n http://172.142.97.81:7777  -b 489

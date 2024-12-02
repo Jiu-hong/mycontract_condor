@@ -1,0 +1,149 @@
+"transactions": {
+  "5": [
+    {
+      "Version1": "30e885aa38d667ab2bd046c333876b255a4b03d3ef4a93224f3c4ab57843e491"
+    }
+  ]
+}
+{
+  "jsonrpc": "2.0",
+  "id": -7249234667665189719,
+  "result": {
+    "api_version": "2.0.0",
+    "transaction": {
+      "Version1": {
+        "hash": "30e885aa38d667ab2bd046c333876b255a4b03d3ef4a93224f3c4ab57843e491",
+        "payload": {
+          "initiator_addr": {
+            "PublicKey": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f"
+          },
+          "timestamp": "2024-12-02T04:09:19.162Z",
+          "ttl": "30m",
+          "chain_name": "casper-jiuhong-test-jh",
+          "pricing_mode": {
+            "Fixed": {
+              "additional_computation_factor": 0,
+              "gas_price_tolerance": 2
+            }
+          },
+          "fields": {
+            "args": {
+              "Named": []
+            },
+            "entry_point": {
+              "Custom": "apple"
+            },
+            "scheduling": "Standard",
+            "target": {
+              "Stored": {
+                "id": {
+                  "ByPackageName": {
+                    "name": "my_hash",
+                    "version": null
+                  }
+                },
+                "runtime": "VmCasperV1",
+                "transferred_value": 0
+              }
+            }
+          }
+        },
+        "approvals": [
+          {
+            "signer": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f",
+            "signature": "0161666a7a88a408bafdcb8e0f3dc179136f02972c4a79b747e1eb46023d982fa965cf8c192f111532a506ef4a33f4480637789416cf00457cb969197b216af105"
+          }
+        ]
+      }
+    },
+    "execution_info": {
+      "block_hash": "308a1d6b9fd34b7190208d06d1c6b5e6388e342963778ce515117a999cee2706",
+      "block_height": 559,
+      "execution_result": {
+        "Version2": {
+          "initiator": {
+            "PublicKey": "010068920746ecf5870e18911ee1fc5db975e0e97fffcbbf52f5045ad6c9838d2f"
+          },
+          "error_message": null,
+          "limit": "1500000000",
+          "consumed": "0",
+          "cost": "1500000000",
+          "transfers": [],
+          "size_estimate": 488,
+          "effects": [
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "04002f6859",
+                    "parsed": "1500000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+              "kind": "Identity"
+            },
+            {
+              "key": "hash-86f08f473f9014ba0530fefe8b896d9678f921f04c47395ff441df755050bf35",
+              "kind": "Identity"
+            },
+            {
+              "key": "hash-fcdc1c31e54e7ad0bfe7a5aaa75836df334c44ee0b973c335d92561a7af183f1",
+              "kind": "Identity"
+            },
+            {
+              "key": "hash-425632e1af40d27d5a0600c4c512cbebfb97bb2a60247b8ba359c023499215e9",
+              "kind": "Identity"
+            },
+            {
+              "key": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000",
+              "kind": {
+                "Prune": "balance-hold-01be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f960e3c878593010000",
+              "kind": {
+                "Prune": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f960e3c878593010000"
+              }
+            },
+            {
+              "key": "balance-hold-00be185fd02c1f485e551bd11a7eb88e0cc2b17b7f013baea575bcf6f9f8c92f96df008f8593010000",
+              "kind": {
+                "Write": {
+                  "CLValue": {
+                    "cl_type": "U512",
+                    "bytes": "04002f6859",
+                    "parsed": "1500000000"
+                  }
+                }
+              }
+            },
+            {
+              "key": "bid-addr-01eb8b010ac77518a4b8cf184727a9ae8dc48006fb2f4d0ee9e1121877ed7ad2ab",
+              "kind": "Identity"
+            },
+            {
+              "key": "bid-addr-04eb8b010ac77518a4b8cf184727a9ae8dc48006fb2f4d0ee9e1121877ed7ad2ab0f00000000000000",
+              "kind": {
+                "Write": {
+                  "BidKind": {
+                    "Credit": {
+                      "validator_public_key": "0198516993f6521afbef8e41c9ab97437ce2e51a3e6e72ad8af3088557f5551e9e",
+                      "era_id": 15,
+                      "amount": "1500000000"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
