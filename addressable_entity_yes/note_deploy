@@ -1,0 +1,38 @@
+../casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-path ../contract/target/wasm32-unknown-unknown/release/contract.wasm \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+package-3db82c72eb2c72a878559a1b38767c0304d89b1cee5c6cce15e1063514f274bc
+entity-contract-581d63eb45623226134a95516900c257eb0d9a03cc97c831b6b7aa9dbdafba50
+
+../casper-client get-deploy -n http://172.142.97.81:7777  \
+461ddcfef4f86a68c22a029ff39ab9debc9b995db9b6c6826f7795bf3d8eac2b
+
+===call entry-point session-hash NG===
+../casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-hash hash-581d63eb45623226134a95516900c257eb0d9a03cc97c831b6b7aa9dbdafba50 \
+--session-entry-point apple \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+"error_message": "Failure(Storage(CannotProvideProofsOverCachedData))",
+
+../casper-client get-deploy -n http://172.142.97.81:7777 \
+c27b7573d2d04f3f300fbf2504e4b204d60a5700b18aa4339e620ffa5a123c07
+
+===call entry-point session-package-hash OK===
+../casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-package-hash package-3db82c72eb2c72a878559a1b38767c0304d89b1cee5c6cce15e1063514f274bc \
+--session-entry-point apple \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+../casper-client get-deploy -n http://172.142.97.81:7777 \
+18a17b34ef4c48592ee9021508b36a05744873e08c8792a57d8e3e5b487fd610

@@ -1,0 +1,60 @@
+=== install OK====
+../casper-client put-transaction session \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--transaction-path ../contract/target/wasm32-unknown-unknown/release/contract.wasm \
+--payment-amount 1000 \
+--gas-price-tolerance 2 \
+--pricing-mode fixed \
+--install-upgrade \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+package-0479a14f9effe1491aadfa6c6cca12c34bb65571dbee6af6831cb6f819e2661c
+../casper-client get-transaction -n http://172.142.97.81:7777  \
+0e1c2e5a4dca68c3a225b4dd0b99fc588825303acaa4dc77f888058bc121d19e
+
+===call entry-point package OK===
+../casper-client put-transaction package \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--package-address package-0479a14f9effe1491aadfa6c6cca12c34bb65571dbee6af6831cb6f819e2661c \
+--session-entry-point apple \
+--gas-price-tolerance 2 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+../casper-client get-transaction -n http://172.142.97.81:7777  \
+619a19c8a0030ea64cc7d61483baecbfa3aaceb2b9001f4d16d883abb790a94c
+
+== package-name  OK===
+../casper-client put-transaction package-name \
+--transaction-package-name "my_hash" \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-entry-point apple \
+--gas-price-tolerance 2 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+../casper-client get-transaction -n http://172.142.97.81:7777  \
+ae3efb701af9ea2054c9fd61a948ba8338769ab7119507f07add792568c3605a
+
+=== invocable-entity NG ===
+../casper-client put-transaction invocable-entity \
+--entity-address entity-contract-9d132b51168d8ae55f317a03891ba65cc0947db1a6b02a740f4c1eb9820877f2 \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-entry-point apple \
+--gas-price-tolerance 2 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+ "error_message": "Failure(Storage(CannotProvideProofsOverCachedData))",
+
+../casper-client get-transaction -n http://172.142.97.81:7777  \
+19fa6844965e9264e70ba8932558fa66d962b49e185d42aa75f32e11db6de03c
+
+../casper-client get-transaction -n http://172.142.97.81:7777  \
+9f3ff0e04845d6d4fb4d3b07e532fc9756bb8d2669e84626861a9744ea5562fa
+
+=== How to input --entity-alias ?
+../casper-client put-transaction invocable-entity-alias
+      --entity-alias <STRING>
+          The alias for targeting a stored entity.

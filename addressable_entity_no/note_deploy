@@ -8,7 +8,7 @@
 ./casper-client get-deploy -n http://172.142.97.81:7777  \
 8739849537e7c9cec817b581ee98c70b215e32278b7847c7432396ff1e8e3365
 
-===call entry-point===
+===call entry-point session-hash OK===
 ./casper-client put-deploy  \
 --chain-name casper-jiuhong-test-jh \
 -n http://172.142.97.81:7777 \
@@ -21,7 +21,20 @@
 e8c1a4baba7678c73e0a175d5937d4b4dcb6a365d9251972b4dcf1cffffd2b3b
 ==
 
-
 ./casper-client get-block -n http://172.142.97.81:7777  -b 584
 ./casper-client get-block -n http://172.142.97.81:7777  -b 602
+
+
+
+===call entry-point session-package-hash NG===
+./casper-client put-deploy  \
+--chain-name casper-jiuhong-test-jh \
+-n http://172.142.97.81:7777 \
+--session-package-hash hash-ffe840e71d6cbbe18e0be64815bef1b8c4690b1c2eae0a3bb20022744d2a6fb1 \
+--session-entry-point apple \
+--payment-amount 1000 \
+--secret-key /home/ubuntu/keys/test0/secret_key.pem
+
+response for rpc-id -7898898937052094600 account_put_deploy is json-rpc error: {"code":-32008,"message":"Invalid Deploy","data":"the deploy was invalid: no such package at hash"}
+
 
